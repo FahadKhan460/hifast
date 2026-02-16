@@ -14,13 +14,6 @@ if (! file_exists($htaPath)) {
     }
 }
 
-if (! file_exists(__DIR__ . '/../storage/installed')
-    && ! (isset($_SERVER['REQUEST_URI']) && substr($_SERVER['REQUEST_URI'], 0, 10) == '/installer')
-    && (stripos($_SERVER['REQUEST_URI'], '_debugbar') !== 1)) {
-    header('Location: /installer');
-    exit;
-}
-
 if (version_compare(PHP_VERSION, '8.1', '<')) {
     echo 'Your current version of PHP does not meet the requirements. Upgrade to at least version 8.1 <br/>';
     echo '您当前PHP版本不满足要求，至少升级至 8.1 版本';

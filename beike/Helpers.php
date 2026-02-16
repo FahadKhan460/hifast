@@ -92,7 +92,7 @@ function admin_name(): string
  */
 function load_settings()
 {
-    if (is_installer() || ! file_exists(__DIR__ . '/../storage/installed')) {
+    if (is_installer()) {
         return;
     }
     $result = \Beike\Repositories\SettingRepo::getGroupedSettings();

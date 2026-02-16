@@ -6,9 +6,6 @@ mix.sass('resources/beike/admin/css/bootstrap/bootstrap.scss', 'public/build/bei
 mix.sass('resources/beike/admin/css/app.scss', 'public/build/beike/admin/css/app.css');
 mix.js('resources/beike/admin/js/app.js', 'public/build/beike/admin/js/app.js');
 
-// 安装引导
-mix.sass('beike/Installer/assets/scss/app.scss', 'public/install/css/app.css');
-
 // design
 mix.sass('resources/beike/admin/css/design/app.scss', 'public/build/beike/admin/css/design.css');
 
