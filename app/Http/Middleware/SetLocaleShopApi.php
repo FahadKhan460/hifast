@@ -30,7 +30,7 @@ class SetLocaleShopApi
         if (empty($locale)) {
             $locale = $request->get('locale');
         }
-        $locale = $locale ?? 'zh_cn';
+        $locale = $locale ?? 'en';
 
         $languages = languages()->toArray();
         register('locale', $locale);
