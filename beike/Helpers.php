@@ -92,7 +92,7 @@ function admin_name(): string
  */
 function load_settings()
 {
-    if (is_installer()) {
+    if (is_installer() || app()->runningInConsole()) {
         return;
     }
     $result = \Beike\Repositories\SettingRepo::getGroupedSettings();
