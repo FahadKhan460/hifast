@@ -261,6 +261,7 @@ return [
 
     'free_plugin_codes' => [
         'bestseller',
+        'cash_on_delivery',
         'flat_shipping',
         'latest_products',
         'openai',
