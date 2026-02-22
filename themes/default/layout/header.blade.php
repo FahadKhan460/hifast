@@ -1,5 +1,5 @@
 <header>
-  @hook('header.before')
+  {{-- @hook('header.before')
   <div class="top-wrap">
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <div class="left d-flex align-items-center">
@@ -38,9 +38,9 @@
             </div>
           </div>
         @endif
-        @endhookwrapper
+        @endhookwrapper --}}
 
-        @hookwrapper('header.top.language')
+        {{-- @hookwrapper('header.top.language')
         @if (count($languages) > 1)
           <div class="dropdown">
             <a class="btn dropdown-toggle" href="javascript:void(0)" role="button" id="language-dropdown"
@@ -75,7 +75,7 @@
         @hook('header.top.right')
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="header-content d-none d-lg-block">
     <div class="container-fluid navbar-expand-lg">
