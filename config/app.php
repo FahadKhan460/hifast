@@ -191,7 +191,7 @@ return [
         App\Providers\HorizonServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        // Beike\Admin\Providers\AdminServiceProvider::class,
+        Beike\Admin\Providers\AdminServiceProvider::class,
         Beike\Shop\Providers\ShopServiceProvider::class,
         Beike\Shop\Providers\PluginServiceProvider::class,
         Beike\AdminAPI\Providers\AdminAPIServiceProvider::class,
