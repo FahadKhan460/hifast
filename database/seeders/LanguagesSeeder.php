@@ -39,15 +39,15 @@ class LanguagesSeeder extends Seeder
     public function getItems()
     {
         return [
-            [
-                "id" => 1,
-                "name" => "中文",
-                "code" => "zh_cn",
-                "locale" => "",
-                "image" => "catalog/favicon.png",
-                "sort_order" => 1,
-                "status" => 1,
-            ],
+//            [
+//                "id" => 1,
+//                "name" => "中文",
+//                "code" => "zh_cn",
+//                "locale" => "",
+//                "image" => "catalog/favicon.png",
+//                "sort_order" => 1,
+//                "status" => 1,
+//            ],
             [
                 "id" => 2,
                 "name" => "English",
