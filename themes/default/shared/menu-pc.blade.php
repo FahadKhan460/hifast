@@ -2,9 +2,12 @@
   @hook('header.menu.before')
   @foreach ($menu_content as $menu)
     @if ($menu['name'])
+      @php
+        $isActive = $menu['link'] && (request()->url() === $menu['link'] || request()->is(ltrim(parse_url($menu['link'], PHP_URL_PATH), '/')));
+      @endphp
       <li
-        class="nav-item {{ isset($menu['children_group']) ? 'dropdown' : '' }} {{ isset($menu['isFull']) && $menu['isFull'] ? 'position-static' : '' }}">
-        <a class="nav-link fw-bold {{ isset($menu['children_group']) ? 'dropdown-toggle' : '' }}"
+        class="nav-item {{ isset($menu['children_group']) ? 'dropdown' : '' }} {{ isset($menu['isFull']) && $menu['isFull'] ? 'position-static' : '' }} {{ !$loop->first ? 'has-separator' : '' }}">
+        <a class="nav-link fw-bold {{ isset($menu['children_group']) ? 'dropdown-toggle' : '' }} {{ $isActive ? 'active' : '' }}"
           target="{{ isset($menu['new_window']) && $menu['new_window'] ? '_blank' : '_self' }}"
           href="{{ $menu['link'] ?: 'javascript:void(0)' }}">
           {{ $menu['name'] }}

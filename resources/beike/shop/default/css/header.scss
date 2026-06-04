@@ -41,7 +41,7 @@ header {
   }
 
   .header-content {
-    .nav-item {
+    .right-btn .nav-item {
       &:hover {
         > a {
           color: $primary;
@@ -110,6 +110,21 @@ header {
       > .navbar-nav {
         > .nav-item {
           background-color: transparent;
+          position: relative;
+
+          // Pipe separator between items (all items except first)
+          &.has-separator::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 16px;
+            width: 1px;
+            background-color: #ddd;
+            border-radius: 1px;
+          }
+
           &:hover {
             > .nav-link {
               > svg {
@@ -120,10 +135,23 @@ header {
 
           > .nav-link {
             font-size: 15px;
-            padding: 1rem;
+            padding: .45rem 1rem;
+            margin: .55rem 0;
             position: relative;
+            border-radius: 999px;
+            transition: background-color .2s ease-in-out, color .2s ease-in-out;
             @media (max-width: 1200px) {
-              padding: 1rem .5rem;
+              padding: .45rem .5rem;
+            }
+
+            &:hover,
+            &.active {
+              background-color: $primary;
+              color: #fff !important;
+
+              > svg {
+                stroke: #fff;
+              }
             }
 
             > svg {
