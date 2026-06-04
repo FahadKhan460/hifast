@@ -8,10 +8,12 @@
     <div class="module-title">{{ $content['title'] ?? ''}} <div class="wave-line"></div></div>
     <div class="{{ $content['module_size'] ?? 'container-fluid' }}">
       @if ($content['tabs'] ?? false)
-        <div class="nav justify-content-center">
-          @foreach ($content['tabs'] as $key => $tabs)
-          <a class="nav-link {{ ($design ? $editableTabsValue == $key : $loop->first) ? 'active' : '' }}" href="#tab-product-{{ $module_id }}-{{ $loop->index }}" data-bs-toggle="tab">{{ $tabs['title'] }}</a>
-          @endforeach
+        <div class="d-flex justify-content-center">
+          <div class="nav">
+            @foreach ($content['tabs'] as $key => $tabs)
+            <a class="nav-link {{ ($design ? $editableTabsValue == $key : $loop->first) ? 'active' : '' }}" href="#tab-product-{{ $module_id }}-{{ $loop->index }}" data-bs-toggle="tab">{{ $tabs['title'] }}</a>
+            @endforeach
+          </div>
         </div>
         <div class="tab-content">
           @foreach ($content['tabs'] as $key => $products)
