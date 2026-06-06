@@ -1,0 +1,14 @@
+{
+  "code": "cash_on_delivery",
+  "name": {
+    "en": "Cash on Delivery",
+    "zh_cn": "货到付款"
+  },
+  "description": {
+    "en": "Pay with cash when your order is delivered",
+    "zh_cn": "订单送达时现金支付"
+  },
+  "version": "1.0.0",
+  "author": "BeikeShop",
+  "type": "payment"
+}
