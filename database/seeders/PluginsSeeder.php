@@ -71,6 +71,11 @@ class PluginsSeeder extends Seeder
                 'id' => '57',
                 'type' => 'payment',
                 'code' => 'stripe',
+            ],
+            [
+                'id' => '58',
+                'type' => 'payment',
+                'code' => 'cash_on_delivery',
             ]
         ];
     }
