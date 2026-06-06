@@ -194,6 +194,7 @@ return [
         Beike\Admin\Providers\AdminServiceProvider::class,
         Beike\Shop\Providers\ShopServiceProvider::class,
         Beike\Shop\Providers\PluginServiceProvider::class,
+        App\Providers\CashOnDeliveryServiceProvider::class,
         Beike\AdminAPI\Providers\AdminAPIServiceProvider::class,
         Beike\Hook\HookServiceProvider::class,
         Beike\Facades\BeikeHttp\BeikeHttpServiceProvider::class
